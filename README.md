@@ -68,7 +68,7 @@ cz-conventional-changelog husky -D
 
 3. 使用工具
    在开发过程中，确保代码符合 ESLint 规范，并使用 Prettier 进行格式化。
-   提交代码时，请使用 git commit 命令并且按照 Commitizen 的提示规范化提交消息。
+   提交代码时，请使用 npx git-cz 命令并且按照 Commitizen 的提示规范化提交消息。
    发布新版本时，请运行发布脚本以生成 Changelog。
 
 ## 结语
