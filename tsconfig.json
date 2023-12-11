@@ -1,27 +1,55 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    // 指定 ECMAScript 目标版本
     "module": "esnext",
+    // 指定模块代码生成方式
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    // 库文件的列表
+    "allowJs": true,
+    // 允许编译 JavaScript 文件
+    "skipLibCheck": true,
+    // 跳过所有声明文件的类型检查
+    "strict": true,
+    // 启用所有严格类型检查选项
+    "forceConsistentCasingInFileNames": true,
+    // 禁止对同一文件的不一致引用
+    "noEmit": true,
+    // 不生成输出文件
+    "esModuleInterop": true,
+    // 启用 CommonJS 和 ES 模块间的互操作性
     "moduleResolution": "bundler",
+    // 选择模块解析策略
     "resolveJsonModule": true,
+    // 包含导入 JSON 模块的能力
     "isolatedModules": true,
+    // 为每个文件执行类型检查
     "jsx": "preserve",
+    // 在 .tsx 文件中支持 JSX
     "incremental": true,
+    // 启用增量编译
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
