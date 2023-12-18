@@ -1,14 +1,8 @@
 {
-  "extends": [
-    "next",
-    "next/core-web-vitals",
-    "prettier"
-  ],
-  "plugins": [
-    "prettier"
-  ],
-  "rules": {
-    "prettier/prettier": "error"
-    // 其他规则...
-  }
+    "extends": ["next", "next/core-web-vitals", "prettier"],
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": "error"
+        // 其他规则...
+    }
 }

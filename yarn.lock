@@ -12,6 +12,11 @@
   resolved "https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
+"@alova/scene-react@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.npmmirror.com/@alova/scene-react/-/scene-react-1.4.0.tgz#f58f0136806d77f561354ac5acda13b133b4c36b"
+  integrity sha512-1hrwlL2wHwPoR5FFzH9rTkEoSSI3QxbWRMjp58Ogs+jqzlih6M+6IkAojHz/8UvsDMS1G0dMn8ui1N82ddKlbQ==
+
 "@babel/code-frame@^7.0.0":
   version "7.23.5"
   resolved "https://mirrors.cloud.tencent.com/npm/@babel/code-frame/-/code-frame-7.23.5.tgz#9009b69a8c602293476ad598ff53e4562e15c244"
