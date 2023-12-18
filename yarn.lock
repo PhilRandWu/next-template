@@ -538,6 +538,11 @@ ajv@^8.11.0:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
+alova@^2.16.1:
+  version "2.16.1"
+  resolved "https://registry.npmmirror.com/alova/-/alova-2.16.1.tgz#d4c546bdd59ac3f59f9e51eee2a30a2bbfe7ac60"
+  integrity sha512-I6xps1sSqUpHwaRV2vLZes637Tsxwj60O4rCxOpgYrLnkc+xa5TxwooQj1xXD9C/jQzXrcTzkBCXAhZoxNqE0A==
+
 ansi-escapes@^4.2.1:
   version "4.3.2"
   resolved "https://mirrors.cloud.tencent.com/npm/ansi-escapes/-/ansi-escapes-4.3.2.tgz#6b2291d1db7d98b6521d5f1efa42d0f3a9feb65e"
