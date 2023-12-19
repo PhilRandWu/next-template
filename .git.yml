@@ -23,8 +23,8 @@ job_deploy:
     - mkdir -p ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
     - ls -a
-    - scp -r pension.tar.gz $DEV_SERVER_USER@$DEV_SERVER_HOST:/program/instun/web/instan-h5
-    - ssh $DEV_SERVER_USER@$DEV_SERVER_HOST "cd /program/instun/web/instan-h5 && tar -xzf pension.tar.gz && docker compose down && docker images && docker rmi pension || true && docker load -i pension.tar && docker compose up -d && rm pension.tar.gz"
+    - scp -r pension.tar.gz $DEV_SERVER_USER@$DEV_SERVER_HOST:/program/pension/web/pension-h5
+    - ssh $DEV_SERVER_USER@$DEV_SERVER_HOST "cd /program/pension/web/pension-h5 && tar -xzf pension.tar.gz && docker compose down && docker images && docker rmi pension || true && docker load -i pension.tar && docker compose up -d && rm pension.tar.gz"
   tags:
     - WebDockerRunner
   retry: 0
