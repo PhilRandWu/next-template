@@ -17,7 +17,11 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Next.js + Ts + TailwindCss + Eslint + Prettier + Husky + Lint-staged + Commitlint + Commitizen + Conventional-changelog
+Next.js + Ts + 
+TailwindCss +
+Eslint + Prettier + Husky + Lint-staged + Commitlint + Commitizen + Conventional-changelog + 
+Alova + 
+date-fns
 
 ```bash
  yarn add eslint prettier eslint-config-prettier eslint-plugin-prettier -D
