@@ -1,34 +1,30 @@
 image: docker:latest
 
 stages:
-  - build
+    - build
 
 job_deploy:
-  stage: build
-  services:
-    - docker:dind
-  only:
-    - prod
-  before_script:
-    - echo 'docker deploy'
-  script:
-    - docker build -t pension .
-    - docker save pension -o pension.tar
-    - tar -czf pension.tar.gz pension.tar
-    - ls -a
-    - eval $(ssh-agent -s)
-    - echo "$SSH_PRIVATE_KEY" > ~/deploy.key
-    - chmod 0600 ~/deploy.key
-    - ssh-add ~/deploy.key
-    - mkdir -p ~/.ssh
-    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-    - ls -a
-    - scp -r pension.tar.gz $DEV_SERVER_USER@$DEV_SERVER_HOST:/program/pension/web/pension-h5
-    - ssh $DEV_SERVER_USER@$DEV_SERVER_HOST "cd /program/pension/web/pension-h5 && tar -xzf pension.tar.gz && docker compose down && docker images && docker rmi pension || true && docker load -i pension.tar && docker compose up -d && rm pension.tar.gz"
-  tags:
-    - WebDockerRunner
-  retry: 0
-
-
-
-
+    stage: build
+    services:
+        - docker:dind
+    only:
+        - prod
+    before_script:
+        - echo 'docker deploy'
+    script:
+        - docker build -t pension .
+        - docker save pension -o pension.tar
+        - tar -czf pension.tar.gz pension.tar
+        - ls -a
+        - eval $(ssh-agent -s)
+        - echo "$SSH_PRIVATE_KEY" > ~/deploy.key
+        - chmod 0600 ~/deploy.key
+        - ssh-add ~/deploy.key
+        - mkdir -p ~/.ssh
+        - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+        - ls -a
+        - scp -r pension.tar.gz $DEV_SERVER_USER@$DEV_SERVER_HOST:/program/pension/web/pension-h5
+        - ssh $DEV_SERVER_USER@$DEV_SERVER_HOST "cd /program/pension/web/pension-h5 && tar -xzf pension.tar.gz && docker compose down && docker images && docker rmi pension || true && docker load -i pension.tar && docker compose up -d && rm pension.tar.gz"
+    tags:
+        - WebDockerRunner
+    retry: 0

@@ -17,10 +17,10 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Next.js + Ts + 
+Next.js + Ts +
 TailwindCss +
-Eslint + Prettier + Husky + Lint-staged + Commitlint + Commitizen + Conventional-changelog + 
-Alova + 
+Eslint + Prettier + Husky + Lint-staged + Commitlint + Commitizen + Conventional-changelog +
+Alova +
 date-fns
 
 ```bash
