@@ -35,7 +35,16 @@
         ],
         "noImplicitAny": false,
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["./src/*"],
+            "@/components/*": ["components/*"],
+            "@/config/*": ["config/*"],
+            "@/hoc/*": ["hoc/*"],
+            "@/hooks/*": ["hooks/*"],
+            "@/i18n/*": ["i18n/*"],
+            "@/services/*": ["services/*"],
+            "@/store/*": ["store/*"],
+            "@/style/*": ["style/*"],
+            "@/utils/*": ["utils/*"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
