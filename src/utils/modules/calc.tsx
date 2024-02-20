@@ -12,6 +12,19 @@ export function hexToRgba(hex: string, alpha: number) {
 }
 
 /**
+ * use classnames, filter empty className
+ * @param classes string[]
+ * @example
+ *   className={classNames(
+ *        active ? 'bg-gray-100' : '',
+ *        'block px-4 py-2 text-sm text-gray-700'
+ *   )}
+ */
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+}
+
+/**
  * file_size_format 将文件大小转为 Bytes KB MB GB TB PB EB ZB YB 等单位
  * @param filesize number
  */
@@ -29,7 +42,15 @@ export const file_size_format = (filesize: number): string => {
 }
 
 /**
- * 权限枚举
+ * permission enum
+ * * NONE: 0
+ * * UPLOAD: 1
+ * * DOWNLOAD: 2
+ * * DEL: 4
+ * * UPDATE: 8
+ * * CLOSE: 16
+ * * OPEN: 32
+ * * DETAIL: 64
  */
 enum PermissionEnum {
     NONE = 0,
@@ -93,13 +114,13 @@ const PermissionMethod = {
 }
 
 /**
- * 权限操作:
- * enum: 权限枚举
- * method: 权限方法
- *      addPermission: 添加权限
- *      hasPermission: 是否有权限
- *      removePermission: 移除权限
- *      listPermission: 权限列表 -> PermissionEnumKey = keyof typeof PermissionEnum
+ * * 权限操作:
+ * * enum: 权限枚举
+ * * method: 权限方法
+ *      - addPermission: 添加权限
+ *      - hasPermission: 是否有权限
+ *      - removePermission: 移除权限
+ *      - listPermission: 权限列表 -> PermissionEnumKey = keyof typeof PermissionEnum
  */
 export const Permission = {
     enum: PermissionEnum,

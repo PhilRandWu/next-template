@@ -1,3 +1,18 @@
+/**
+ * RegExp
+ * * phone
+ * * strong_password
+ * * block_chain_account
+ * * money
+ * * pdfFile
+ * * rate
+ * * percent
+ * * login_phone
+ * * tel_phone
+ * * only_number
+ * * number
+ * @type {{phone: RegExp, strong_password: RegExp, block_chain_account: RegExp, money: RegExp, pdfFile: RegExp, rate: RegExp, percent: RegExp, login_phone: RegExp, tel_phone: RegExp, only_number: RegExp, number: RegExp}}
+ */
 export const RegExp = {
     phone: /^1(3\d|4[5-9]|5[0-35-9]|6[567]|7[0-8]|8\d|9[0-35-9])\d{8}$/,
     /** 强密码（长度为8位以上，包含数字和大小写） */
@@ -17,7 +32,7 @@ export const RegExp = {
 }
 
 /**
- * 下载excel
+ * download excel
  * @param url excel url
  * @param fileName 文件名
  * @constructor

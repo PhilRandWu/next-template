@@ -1,6 +1,6 @@
 /**
- * 复制到剪切板
- * @param text 复制的文本
+ * copy text to clipboard
+ * @param text copy text
  */
 export function copyToClipboard(text: string) {
     if (navigator.clipboard) {
